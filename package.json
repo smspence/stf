@@ -83,7 +83,7 @@
     "split": "^1.0.0",
     "stf-appstore-db": "^1.0.0",
     "stf-browser-db": "^1.0.2",
-    "stf-device-db": "^1.2.0",
+    "stf-device-db": "file:../stf-device-db",
     "stf-syrup": "^1.0.0",
     "stf-wiki": "^1.0.0",
     "swagger-express-mw": "^0.7.0",
