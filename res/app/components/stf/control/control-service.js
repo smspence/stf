@@ -289,6 +289,12 @@ module.exports = function ControlServiceFactory(
       })
     }
 
+    this.setWakelockEnabled = function(enabled) {
+      return sendTwoWay('wakelock.set', {
+        enabled: enabled
+      })
+    }
+
     this.getWifiStatus = function() {
       return sendTwoWay('wifi.get')
     }

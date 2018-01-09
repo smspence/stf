@@ -14,8 +14,14 @@ module.exports = function DeviceSettingsCtrl($scope, $timeout) {
 
   $scope.toggleWifi = function(enable) {
     if ($scope.control) {
-      $scope.control.setWifiEnabled(enable)
+      console.log($scope.control.setWifiEnabled(enable))
       $timeout(getWifiStatus, 2500)
+    }
+  }
+
+  $scope.toggleWakeLock = function(enable) {
+    if ($scope.control) {
+      $scope.control.acquireWakeLock(enable)
     }
   }
 

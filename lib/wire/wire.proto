@@ -78,6 +78,7 @@ enum MessageType {
   FileSystemGetMessage       = 82;
   ConnectStartedMessage      = 92;
   ConnectStoppedMessage      = 93;
+  WakelockSetEnableMessage   = 80;
 }
 
 message ConnectStartedMessage {
@@ -528,6 +529,10 @@ message WifiSetEnabledMessage {
 message WifiGetStatusMessage {
 }
 
+message WakelockSetEnableMessage {
+    required bool enabled = 1;
+}
+
 // Events, these must be kept in sync with STFService/wire.proto
 
 message AirplaneModeEvent {
@@ -566,3 +571,5 @@ message RotationEvent {
   required string serial = 1;
   required int32 rotation = 2;
 }
+
+
