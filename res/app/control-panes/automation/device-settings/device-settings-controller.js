@@ -19,6 +19,12 @@ module.exports = function DeviceSettingsCtrl($scope, $timeout) {
     }
   }
 
+  $scope.toggleWakeLock = function(enable) {
+    if ($scope.control) {
+      $scope.control.acquireWakeLock(enable)
+    }
+  }
+
   $scope.$watch('ringerMode', function(newValue, oldValue) {
     if (oldValue) {
       if ($scope.control) {

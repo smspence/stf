@@ -5,6 +5,12 @@
         .stf-vnc-control-header.as-cell
           .stf-vnc-right-buttons.pull-right
             .btn-group
+              label.btn.btn-sm.btn-primary-outline(ng-model='wakelockEnabled', ng-click='toggleWakelock(false)', uib-btn-radio='false', uib-tooltip='Disable Wake Lock')
+                i.fa.fa-circle.fa-fw
+              label.btn.btn-sm.btn-primary-outline(ng-model='wakelockEnabled', ng-click='toggleWakelock(true)', uib-btn-radio='true', uib-tooltip='Enable Wake Lock')
+                i.fa.fa-circle-o.fa-fw
+            .button-spacer
+            .btn-group
               label.btn-sm.btn-primary-outline(type='button', ng-click='tryToRotate("portrait")',
               ng-model='currentRotation', uib-btn-radio='"portrait"',
               uib-tooltip='{{ "Portrait" | translate }} ({{ "Current rotation:" | translate }} {{ device.display.rotation }}°)', tooltip-placement='bottom').pointer

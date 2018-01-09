@@ -99,6 +99,11 @@ module.exports = function DeviceControlCtrl($scope, DeviceService, GroupService,
   })
 
   // TODO: Refactor this inside control and server-side
+
+  $scope.toggleWakelock = function(enable) {
+    $scope.control.setWakelockEnabled(enable)
+  }
+
   $scope.rotateLeft = function() {
     var angle = 0
     if ($scope.device && $scope.device.display) {
@@ -109,7 +114,7 @@ module.exports = function DeviceControlCtrl($scope, DeviceService, GroupService,
     } else {
       angle -= 90
     }
-    $scope.control.rotate(angle)
+    console.log($scope.control.rotate(angle))
 
     if ($rootScope.standalone) {
       $window.resizeTo($window.outerHeight, $window.outerWidth)
@@ -126,7 +131,7 @@ module.exports = function DeviceControlCtrl($scope, DeviceService, GroupService,
     } else {
       angle += 90
     }
-    $scope.control.rotate(angle)
+    console.log($scope.control.rotate(angle))
 
     if ($rootScope.standalone) {
       $window.resizeTo($window.outerHeight, $window.outerWidth)

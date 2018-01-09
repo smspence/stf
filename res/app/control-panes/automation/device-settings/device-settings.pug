@@ -22,6 +22,14 @@
           label.btn.btn-sm.btn-primary-outline(ng-model='wifiEnabled', ng-click='toggleWifi(true)', uib-btn-radio='true', uib-tooltip='{{"Enable WiFi" | translate}}')
             i.fa.fa-wifi.fa-fw
 
+      .col-md-6
+        h6 Wake Lock
+        .btn-group
+          label.btn.btn-sm.btn-primary-outline(ng-model='wakelockEnabled', ng-click='toggleWakeLock(false)', uib-btn-radio='false', uib-tooltip='Disable Wake Lock')
+            i.fa.fa-power-off.fa-fw
+          label.btn.btn-sm.btn-primary-outline(ng-model='wakelockEnabled', ng-click='toggleWakeLock(true)', uib-btn-radio='true', uib-tooltip='Enable Wake Lock')
+            i.fa.fa-wifi.fa-fw
+
     //.row
       .col-md-12
         h6(translate) Lock Rotation
