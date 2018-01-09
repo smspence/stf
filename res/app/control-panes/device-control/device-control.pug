@@ -4,8 +4,11 @@
       .stf-vnc-navbar.as-row(ng-show='!$root.basicMode && !$root.standalone')
         .stf-vnc-control-header.as-cell
           .stf-vnc-right-buttons.pull-right
-            .device-small-image
-              img(ng-src='/static/app/devices/icon/x24/{{ groupDevice.image || "E30HT.jpg" }}', ng-click='toggleWakelock(false)')
+            .btn-group
+              label.btn.btn-sm.btn-primary-outline(ng-model='wakelockEnabled', ng-click='toggleWakelock(false)', uib-btn-radio='false', uib-tooltip='Disable Wake Lock')
+                i.fa.fa-circle.fa-fw
+              label.btn.btn-sm.btn-primary-outline(ng-model='wakelockEnabled', ng-click='toggleWakelock(true)', uib-btn-radio='true', uib-tooltip='Enable Wake Lock')
+                i.fa.fa-circle-o.fa-fw
             .button-spacer
             .btn-group
               label.btn-sm.btn-primary-outline(type='button', ng-click='tryToRotate("portrait")',

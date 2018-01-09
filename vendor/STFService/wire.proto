@@ -106,7 +106,7 @@ message SetKeyguardStateResponse {
 }
 
 message SetWakeLockRequest {
-    required bool enabled = 0;
+    required bool enabled = 1;
 }
 
 message SetWakeLockResponse {
